@@ -27,7 +27,7 @@
        WRITE-REGISTRO.
            EXEC CICS WRITE
                      FILE('COBTESN1')
-                     FROM(WS-DATOS)
+                     FROM(WS-REGISTRO)
                      RIDFLD(WS-CLAVE)
                      RESP(WS-RESP)
            END-EXEC
