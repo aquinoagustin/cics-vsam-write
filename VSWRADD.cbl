@@ -4,7 +4,7 @@
        WORKING-STORAGE SECTION.
           01 WS-REGISTRO.
              05 WS-CLAVE        PIC 9(2) VALUE ZERO.
-             05 WS-DATOS        PIC X(16).
+             05 WS-DATOS        PIC X(25).
           01 WS-RESP            PIC S9(8) COMP.
           01 WS-CONSTANTES.
              05 WS-MENSAJE-OK   PIC X(16)
@@ -20,7 +20,7 @@
           77 WS-LIMIT           PIC 9(2)  VALUE 10.
        PROCEDURE DIVISION.
        MAIN-PROCESS.
-           MOVE 'MI REGISTRO VSAM' TO WS-DATOS.
+           MOVE 'CAMPO ESCRITO DESDE COBOL' TO WS-DATOS.
            PERFORM WRITE-REGISTRO UNTIL WS-COUNT = WS-LIMIT.
            PERFORM TERMINAR-TRANSACCION.
            EXEC CICS RETURN END-EXEC.
